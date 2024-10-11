@@ -67,6 +67,29 @@ header{
     
 }
 
+
+.whatsapp-link {
+    position: fixed;
+    bottom: 20px; /* Distância da parte inferior da página */
+    right: 20px;  /* Distância do lado direito da página */
+    z-index: 1000; /* Certifica-se de que o ícone fique acima de outros elementos */
+    position: fixed; /* Mantém a logo fixa na tela */
+    padding-top: 100px; /* Espaçamento no topo para evitar sobreposição com a logo */
+}
+
+.whatsapp-link img {
+    width: 60px; /* Largura do ícone */
+    height: 60px; /* Altura do ícone */
+    border-radius: 50%; /* Deixa o ícone circular, se desejar */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Sombra para destacar o ícone */
+    transition: transform 0.3s ease; /* Animação ao passar o mouse */
+}
+
+.whatsapp-link img:hover {
+    transform: scale(1.1); /* Aumenta o ícone ao passar o mouse */
+}
+
+
 .navbar{
     display: flex;    
 }
@@ -739,9 +762,10 @@ footer {
 .carrossel {
     position: relative;
     max-width: 200%;
-    height: auto;
-    margin: auto;
-    clip-path: inset(0 0 02% 0); /* Corta 20% da parte de baixo */
+    width: 700px;  /* Tamanho do contêiner */
+    height: 700px; /* Altura do contêiner */
+    object-fit: contain; /* Mantém a proporção da imagem, sem cortar */
+    clip-path: inset(20% 0 02% 0); /* Corta 20% da parte de baixo */
     overflow: hidden;
     margin-left:-50%;
     justify-content: center;
@@ -1246,7 +1270,17 @@ margin-left: 10px;
 margin-left: 30px;
 }
 
+
+    .whatsapp-link img {
+        
+        width: 70px; /* Ainda menor em celulares */
+        height: 70px;
+        margin-left: -200%;
+   
+    }
 }
+
+
 
 
 

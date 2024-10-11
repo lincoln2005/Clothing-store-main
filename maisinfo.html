@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LADY ROCK - Calça Wide Leg</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <!--Logo-->
+        <div class="logomarca">
+          <img src="img/Sempre Linda png Logo.png" alt="SeuLogo" width="300px" height="auto"></abbr>
+          </div>
+        <!--Menu Icon-->
+        <i class="bx bx-menu" id="menu-icon"></i>
+        <!--Nav list-->
+        <ul class="navbar">
+        <li><a href="index.html">Início</a></li>   
+        <li><a href="#about">Sobre Nós</a></li>  
+        <li><a href="Produtos.html">Produtos</a></li> 
+  
+        </ul>
+   
+                   
+        </div>
+        
+    </header>
+    <div> 
+        <a href="https://wa.me/981748309" class="whatsapp-link" target="_blank">
+        <img src="img/whatsapp-logo.png" alt="WhatsApp" />
+    </a>
+    </div>
+    <div class="container">
+        <h1>CALÇA WIDE LEG RETA LAVAGEM ESCURA CL09067</h1>
+        <div class="product">
+            <div class="product-image">
+                <img src="img/Conjunto JJ325.jpg" alt="Calça Wide Leg">
+            </div>
+            <div class="product-info">
+                <p>
+                    <span class="original-price">R$259,90</span>
+                    <span class="price">R$199,90</span>
+                    <span class="discount">23% OFF</span>
+                </p>
+                <p>2 X DE R$99,95 SEM JUROS</p>
+                <p>Visa Mastercard +</p>
+                <p>5% de desconto pagando com Pix</p>
+                
+                <div class="sizes">
+                    <h3>TAMANHO: <span id="selectedSize">38</span></h3>
+                    <button class="size-btn" data-size="34">34</button>
+                    <button class="size-btn" data-size="36">36</button>
+                    <button class="size-btn selected" data-size="38">38</button>
+                    <button class="size-btn" data-size="40">40</button>
+                    <button class="size-btn" data-size="42">42</button>
+                    <button class="size-btn" data-size="44">44</button>
+                </div>
+                
+                <div>
+                    <h3>QUANTIDADE</h3>
+                    <input type="number" class="quantity" id="quantity" value="1" min="1">
+                </div>
+                
+<a href="https://wa.me/981748309"><button class="buy-btn"> <i class="fa-brands fa-whatsapp"></i> COMPRAR</button></a> 
+
+                
+                <p>Frete grátis</p>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const sizeButtons = document.querySelectorAll('.size-btn');
+            const selectedSizeSpan = document.getElementById('selectedSize');
+            
+            sizeButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    sizeButtons.forEach(btn => btn.classList.remove('selected'));
+                    this.classList.add('selected');
+                    selectedSizeSpan.textContent = this.dataset.size;
+                });
+            });
+
+            const quantityInput = document.getElementById('quantity');
+            quantityInput.addEventListener('change', function() {
+                if (this.value < 1) this.value = 1;
+            });
+
+            const buyButton = document.querySelector('.buy-btn');
+            buyButton.addEventListener('click', function() {
+                const size = selectedSizeSpan.textContent;
+                const quantity = quantityInput.value;
+                alert(`Compra realizada! Tamanho: ${size}, Quantidade: ${quantity}`);
+            });
+        });
+    </script>
+</body>
+</html>
