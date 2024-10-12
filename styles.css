@@ -12,6 +12,17 @@
     list-style: none;
     text-decoration: none;
 }
+
+
+
+
+/* Após o loader sumir, o conteúdo será exibido */
+#conteudo {
+    display: block;
+    text-align: center;
+    margin-top: 50px;
+}
+
 /*variedades*/
 :root{
     
@@ -942,6 +953,25 @@ footer {
     right: 10px;
 }
 
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.ver-mais {
+    background-color: var(--main-color);
+    color: white;
+    margin-top: 10%;
+    padding: 15px 32px;
+    font-size: 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+
 
 
 @media (max-width:1058px){
@@ -1069,8 +1099,8 @@ margin-left: 30px;
 
 
 .carousel-container {
-    width: 100%;
-    max-width: 1200px;
+    width:100%;
+    max-width: 1700%;
     margin: 0 auto;
     position: relative;
 }
@@ -1082,7 +1112,7 @@ margin-left: 30px;
     gap: 15px;
     padding: 15px 0;
     flex-wrap: wrap; /* Permite que as imagens quebrem para a próxima linha */
-    justify-content: space-between; /* Distribui o espaço entre as imagens */
+    justify-content: space-evenly; /* Distribui o espaço entre as imagens */
 }
 .product-card {
     flex: 0 0 auto;

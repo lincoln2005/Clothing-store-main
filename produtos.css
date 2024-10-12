@@ -40,3 +40,54 @@
   .item button:hover {
     background-color: #0056b3; /* Cor de hover no botão */
   }
+
+/* paginaçao*/
+
+
+
+  .pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 130%;
+
+}
+
+.pagination a {
+    color: black;
+    float: left;
+    padding: 10px 16px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+    border: 1px solid #ddd;
+    margin: 0 4px;
+    border-radius: 5px;
+    
+    
+    
+}
+
+.pagination a:hover {
+    background-color: #ddd;
+}
+
+.pagination a.active {
+    background-color: var(--main-color);
+    color: white;
+    border: 1px solid var(--main-color);
+    
+}
+
+
+.pagination a.prev:hover, .pagination a.next:hover {
+    background-color: var(--main-color);
+    color: white;
+    
+}
+
+@media(max-width:768px){
+
+  .pagination {
+    margin-left: 20%;
+  }
+}  
